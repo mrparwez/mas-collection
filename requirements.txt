@@ -1,0 +1,31 @@
+# Core Django framework
+Django>=4.2,<5.0
+
+# REST API support
+djangorestframework==3.14.0
+
+# Image processing for product photos
+Pillow>=9.0.0
+
+# Improved form rendering
+django-crispy-forms>=1.14.0
+
+# Authentication and social login
+django-allauth>=0.51.0
+
+# PostgreSQL adapter (use only if using PostgreSQL)
+psycopg2-binary>=2.9
+
+# Handle CORS for API requests
+django-cors-headers>=3.13.0
+
+# Stripe payment integration
+stripe>=5.0.0
+
+# Debugging tools during development
+django-debug-toolbar>=3.7.0
+
+# Data analysis libraries
+pandas>=2.0.0    # data manipulation and analysis
+numpy>=1.25.0    # numerical computing
+matplotlib>=3.7.0 # data visualization
