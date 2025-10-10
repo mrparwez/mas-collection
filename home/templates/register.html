@@ -36,9 +36,9 @@
                 <div class="account pull-right">
                     <ul class="user-menu">                
                         <li><a href="#">My Account</a></li>
-                        <li><a href="cart.html">Your Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>                    
-                        <li><a href="register.html">Login</a></li>        
+                        <li><a href="{% url 'cart' %}">Your Cart</a></li>
+                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                        <li><a href="{% url 'register' %}">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,27 +48,27 @@
     <div id="wrapper" class="container">
         <section class="navbar main-menu">
             <div class="navbar-inner main-menu">                
-                <a href="index.html" class="logo pull-left"><img src="{% static 'themes/images/logo.png' %}" class="site_logo" alt=""></a>
+                <a href="{% url 'index' %}" class="logo pull-left"><img src="{% static 'themes/images/logo.png' %}" class="site_logo" alt=""></a>
                 <nav id="menu" class="pull-right">
                     <ul>
-                        <li><a href="./products.html">Woman</a>                    
+                        <li><a href="{% url 'product' %}">Woman</a>                    
                             <ul>
-                                <li><a href="./products.html">Lacinia nibh</a></li>                                    
-                                <li><a href="./products.html">Eget molestie</a></li>
-                                <li><a href="./products.html">Varius purus</a></li>                                    
+                                <li><a href="{% url 'product' %}">Lacinia nibh</a></li>                                    
+                                <li><a href="{% url 'product' %}">Eget molestie</a></li>
+                                <li><a href="{% url 'product' %}">Varius purus</a></li>                                    
                             </ul>
                         </li>                                                            
-                        <li><a href="./products.html">Man</a></li>            
-                        <li><a href="./products.html">Sport</a>
+                        <li><a href="{% url 'product' %}">Man</a></li>            
+                        <li><a href="{% url 'product' %}">Sport</a>
                             <ul>                                    
-                                <li><a href="./products.html">Gifts and Tech</a></li>
-                                <li><a href="./products.html">Ties and Hats</a></li>
-                                <li><a href="./products.html">Cold Weather</a></li>
+                                <li><a href="{% url 'product' %}">Gifts and Tech</a></li>
+                                <li><a href="{% url 'product' %}">Ties and Hats</a></li>
+                                <li><a href="{% url 'product' %}">Cold Weather</a></li>
                             </ul>
                         </li>                            
-                        <li><a href="./products.html">Hangbag</a></li>
-                        <li><a href="./products.html">Best Seller</a></li>
-                        <li><a href="./products.html">Top Seller</a></li>
+                        <li><a href="{% url 'product' %}">Hangbag</a></li>
+                        <li><a href="{% url 'product' %}">Best Seller</a></li>
+                        <li><a href="{% url 'product' %}">Top Seller</a></li>
                     </ul>
                 </nav>
             </div>
@@ -144,11 +144,12 @@
                 <div class="span3">
                     <h4>Navigation</h4>
                     <ul class="nav">
-                        <li><a href="./index.html">Homepage</a></li>  
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./contact.html">Contact Us</a></li>
-                        <li><a href="./cart.html">Your Cart</a></li>
-                        <li><a href="./register.html">Login</a></li>                            
+                        <li><a href="{% url 'index' %}">Homepage</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <li><a href="{% url 'cart' %}">Your Cart</a></li>
+                        <li><a href="{% url 'register' %}">Login</a></li>
+                           
                     </ul>                    
                 </div>
                 <div class="span4">
@@ -179,9 +180,9 @@
     </div>
     <script src="{% static 'themes/js/common.js' %}"></script>
     <script>
-        $(document).ready(function() {
-            $('#checkout').click(function(e) {
-                document.location.href = "checkout.html";
+        (document).ready(function() {
+            ('#checkout').click(function(e) {
+                document.location.href = "{% url 'checkout' %}";
             });
         });
     </script>        
