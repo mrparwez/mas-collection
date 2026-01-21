@@ -2,3 +2,5 @@
 __pycache__/
 pydevenv/
 db.sqlite3
+myenv/
+env/
