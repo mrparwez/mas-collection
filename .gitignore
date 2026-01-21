@@ -1,4 +1,7 @@
 *.pyc
 __pycache__/
 pydevenv/
+myenv/
+env/
+venv/
 db.sqlite3
